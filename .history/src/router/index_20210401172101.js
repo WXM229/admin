@@ -103,7 +103,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/message/index'),
         name: 'Message',
-        meta: { title: 'Message', icon: 'pdf', affix: true }
+        meta: { title: 'Message', icon: 'documentation', affix: true }
       }
     ]
   },
@@ -115,7 +115,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/administration/index'),
         name: 'Administration',
-        meta: { title: 'Administration', icon: 'guide', affix: true }
+        meta: { title: 'Administration', icon: 'documentation', affix: true }
       }
     ]
   },
@@ -127,10 +127,10 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/tmk/index'),
         name: 'Tmk',
-        meta: { title: 'Tmk', icon: 'edit', affix: true }
+        meta: { title: 'Tmk', icon: 'documentation', affix: true }
       }
     ]
-  }
+  },
   // {
   //   path: '/guide',
   //   component: Layout,

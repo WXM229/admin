@@ -130,7 +130,7 @@ export const constantRoutes = [
         meta: { title: 'Tmk', icon: 'edit', affix: true }
       }
     ]
-  }
+  },
   // {
   //   path: '/guide',
   //   component: Layout,

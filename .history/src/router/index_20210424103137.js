@@ -5,7 +5,6 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/layout'
-import myRouter from '@/router/modules/myrouter'
 
 /* Router Modules */
 // import componentsRouter from './modules/components'
@@ -108,7 +107,7 @@ export const constantRoutes = [
       }
     ]
   }
-
+  
 ]
 
 /**
@@ -350,7 +349,7 @@ export const asyncRoutes = [
   //     }
   //   ]
   // },
-  myRouter,
+
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]

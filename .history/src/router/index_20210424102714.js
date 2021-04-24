@@ -5,7 +5,6 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/layout'
-import myRouter from '@/router/modules/myrouter'
 
 /* Router Modules */
 // import componentsRouter from './modules/components'
@@ -74,10 +73,35 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
+    // redirect: '/dashboard',
+    children: [
+      {
+        path: 'dashboard',
+        component: () => import('@/views/dashboard/index'),
+        name: 'Dashboard',
+        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+      }
+    ]
+  },
+  // {
+  //   path: '/documentation',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/documentation/index'),
+  //       name: 'Documentation',
+  //       meta: { title: 'Documentation', icon: 'documentation', affix: true }
+  //     }
+  //   ]
+  // },
+  {
+    path: '/message',
+    component: Layout,
     redirect: '/message',
     children: [
       {
-        path: 'message',
+        path: 'index',
         component: () => import('@/views/message/index'),
         name: 'Message',
         meta: { title: 'Message', icon: 'pdf', affix: true }
@@ -108,7 +132,7 @@ export const constantRoutes = [
       }
     ]
   }
-
+  
 ]
 
 /**
@@ -157,6 +181,25 @@ export const asyncRoutes = [
   //     }
   //   ]
   // },
+
+  // {
+  //   path: '/icon',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/icons/index'),
+  //       name: 'Icons',
+  //       meta: { title: 'Icons', icon: 'icon', noCache: true }
+  //     }
+  //   ]
+  // },
+
+  /** when your routing map is too long, you can split it into small modules **/
+  // componentsRouter,
+  // chartsRouter,
+  // nestedRouter,
+  // tableRouter,
 
   // {
   //   path: '/example',
@@ -350,7 +393,7 @@ export const asyncRoutes = [
   //     }
   //   ]
   // },
-  myRouter,
+
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]

@@ -265,7 +265,7 @@ export default {
     handleChangAll() {
       this.form = {}
       this.getTableData()
-      console.log('zskzsk')
+console.log("zskzsk");
     },
     getTableData() {
       const tableData = [{

@@ -20,8 +20,7 @@
             <el-form-item label="激活级别">
               <el-select
                 v-model="form.level"
-                placeholder="请选择"
-              >
+                placeholder="请选择">
                 <el-option
                   v-for="item in options"
                   :key="item.value"
@@ -265,7 +264,7 @@ export default {
     handleChangAll() {
       this.form = {}
       this.getTableData()
-      console.log(111)
+      console.log(111);
     },
     getTableData() {
       const tableData = [{
